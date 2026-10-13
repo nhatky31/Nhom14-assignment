@@ -64,9 +64,9 @@ function App() {
             <hr />
             <h5 className="text-secondary mb-3">Hình chụp mã nguồn (Yêu cầu đề bài)</h5>
             <div className="text-center">
-                {/* Đảm bảo bạn đã lưu ảnh code vào thư mục public với tên code-screenshot.png */}
+                {/* Ảnh trong public được Vite phục vụ từ thư mục gốc của ứng dụng. */}
                 <img 
-                    src="../public/image.png" 
+                    src={`${import.meta.env.BASE_URL}image.png`} 
                     alt="Hình chụp code VS Code" 
                     className="img-fluid rounded shadow" 
                     style={{ maxHeight: '350px', objectFit: 'contain' }}
